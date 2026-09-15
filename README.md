@@ -1,21 +1,28 @@
-# Cqro Code — installer
+# Coqueiro Code — installer
 
-Public installer script for [Cqro Code CLI](https://github.com/andrealb92/cqro-code-cli),
+Public installer script for [Coqueiro Code CLI](https://github.com/andrealb92/coqueiro-code-cli),
 a private repository. This repo contains nothing but the install script — no
 source code.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/andrealb92/cqro-code-installer/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/andrealb92/coqueiro-code-installer/main/install.sh | bash
 ```
 
-You still need access to `andrealb92/cqro-code-cli` (an SSH key or HTTPS
+It installs the `coqueiro` command and its short alias `cqro`.
+
+You still need access to `andrealb92/coqueiro-code-cli` (an SSH key or HTTPS
 credentials with permission on that repo) for the clone step to succeed.
 
 ## SSH clone
 
 ```bash
-CQRO_SSH=1 curl -fsSL https://raw.githubusercontent.com/andrealb92/cqro-code-installer/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/andrealb92/coqueiro-code-installer/main/install.sh | COQUEIRO_SSH=1 bash
 ```
+
+## Coming from Cqro Code
+
+Re-run the installer. It moves a managed install from `~/.cqro-code` to
+`~/.coqueiro-cli` and relinks it. `CQRO_*` variables are still honored.
 
 ## Requirements
 
